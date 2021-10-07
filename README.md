@@ -68,3 +68,34 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Vision 3:考虑到重用性，把一部分内容重新命名，把一部分内容再进行细分
+-App(style, layout“上面一个元素，下面一个元素是flex的左右居中”）
+        -Current（Style, Layout）
+            {gitCurrentWeatherDay}
+          [SubText]//上半部分的半透明文字
+                - Temperature(Style) 
+                - SubText(Style)
+                - Metas(Layout)
+                        -Meta(Layout)
+                            -SubText(Style)
+                        -Meta(Layout)
+                            -SubText(Style)
+                - Name(Style)
+        -OtherCities（Layout）
+                - Subtitle(Style)
+                - City(Layout)
+                        - Name(Style)
+                        -Temperature(Style)
+                        -WeatherImage(将字符串映射成图片)
+                - City(Layout)
+                - City(Layout)
+                N City
+        -Forecast (渲染5天天气)
+            {git5DayForecast}
+                - Subtitle(Style)
+                - Days
+                        - DayofWeek(Style)
+                        - WeatherImage(将字符串映射成图片)
+                        -Temperature(Style)
+                 N day
